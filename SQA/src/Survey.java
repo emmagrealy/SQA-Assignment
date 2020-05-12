@@ -13,6 +13,11 @@ public class Survey {
 		this.questions = questions;
 	}
 	
+	//Empty Constructor 
+	public Survey() 
+	{
+
+	}
 	
 	//Getters and setters
 	public String getName() {
