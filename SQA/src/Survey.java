@@ -19,6 +19,19 @@ public class Survey {
 
 	}
 	
+	//Constructor - taking in a name
+	public Survey(String name) 
+	{
+		this.name = name;
+	}
+
+	
+	//Add questions
+	public void add(Questions quest)
+	{
+			this.questions.add(quest);
+	}
+	
 	//Getters and setters
 	public String getName() {
 		return name;
