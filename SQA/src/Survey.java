@@ -13,10 +13,15 @@ public class Survey {
 		this.questions = questions;
 	}
 
+	
+	//Empty Constructor
+	public Survey() 
+	{
+
+	}
 
 
-
-	public void addQuestion(Questions quest)
+	public void add(Questions quest)
 	{
 		this.questions.add(quest);
 	}
