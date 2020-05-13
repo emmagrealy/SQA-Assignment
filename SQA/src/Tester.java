@@ -46,11 +46,11 @@ public class Tester {
 		assertTrue("Should be an object of type 'ArrayList'",survey.getQuestions() instanceof ArrayList);
 	}
 	
-	//Test to check that questions are being added to the survey
+	//Test - check that questions are being added to the survey
 	@Test
 	public void addQuestion()
 	{
-		//Creation of question object
+		//Question object
 		Questions one = new Questions("Our Customer Service");
 		Questions two = new Questions("Our Product Quality");
 
