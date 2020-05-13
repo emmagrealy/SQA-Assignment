@@ -39,13 +39,28 @@ public class Tester {
 	public void surveyQuestions()
 	{		
 		//Creation of question object
-		Questions one = new Questions("Customer Service");
+		Questions one = new Questions("Our Customer Service");
 		//Collection to represent questions
 		ArrayList<Questions> questions = new ArrayList<Questions>();
 		//adding question to list
 		questions.add(one);
-		Survey s = new Survey("My Questions" ,questions);
-		assertTrue("Should be an object of type arralylist",s.getQuestions() instanceof ArrayList);
-		}
+		Survey survey = new Survey("My Questions" ,questions);
+		assertTrue("Should be an object of type arralylist",survey.getQuestions() instanceof ArrayList);
+	}
 	
+	
+	//Test - check if questions are being added to the survey
+	@Test
+	public void addQuestion()
+	{
+		//Creation of question object
+		Questions one = new Questions("Our Customer Service");
+		Questions two = new Questions("Our Product Quality");
+		
+		Survey survey = new Survey("My Questions");
+		survey.add(one);
+		survey.add(two);
+
+		assertEquals("Length of questions array should be 2",2 ,survey.getQuestions().size());
+	}
 }
