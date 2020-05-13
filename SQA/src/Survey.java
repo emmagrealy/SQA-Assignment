@@ -12,15 +12,21 @@ public class Survey {
 		this.name = name;
 		this.questions = questions;
 	}
-
 	
 	//Empty Constructor
 	public Survey() 
 	{
 
 	}
+	
+	
+	//Constructor taking in a name
+	public Survey(String name) 
+	{
+		this.name = name;
+	}
 
-
+	//Add method
 	public void add(Questions quest)
 	{
 		this.questions.add(quest);
