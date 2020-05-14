@@ -7,8 +7,8 @@ public class Questions {
 	public Questions(String question) {
 		this.question = question;
 	}
-	
-	//Getters and setters 
+
+  //Getters and setters 
 	public String getQuestions() {
 		return question;
 	}
@@ -17,5 +17,4 @@ public class Questions {
 		this.question = question;
 	}
 
-	
 }
