@@ -19,9 +19,15 @@ public class Survey {
 		
 	}
 
+	
+	//Constructor
+	public Survey(String name) 
+	{
+		this.name = name;
+	}
+	
 
-
-	public void addQuestion(Questions quest)
+	public void add(Questions quest)
 	{
 		this.questions.add(quest);
 	}
