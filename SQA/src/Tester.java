@@ -4,6 +4,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -95,7 +96,7 @@ public class Tester {
 		Survey survey = new Survey();
 
 		//Question objectS
-		Questions one = new Questions("Customer Service");
+		Questions one = new Questions("Our Customer Service");
 
 		//Add answers to question responses
 		one.getResponse().setAnswer(2);
@@ -104,4 +105,31 @@ public class Tester {
 		assertEquals("Value should be '2'",2,one.getResponse().getAnswer());
 	}
 	
+	
+	//Test - is a survey responses obtained from survey 
+		public void surveyResponse()
+		{
+			//Survey
+			Survey survey = new Survey();
+
+			//Question objectS
+			Questions one = new Questions("Our Customer Service");
+			Questions two = new Questions("Our Product Quality");
+
+			//Add answer to question response
+			one.getResponse().setAnswer(2);
+			two.getResponse().setAnswer(3);
+			
+			
+			//Add questions to survey
+			survey.add(one);
+			survey.add(two);
+
+			//ArrayList being returned
+			ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
+
+			//Test - do the response lists match
+			assertArrayEquals("ArrayList should equal [2,3]", expected,survey.getResponses());
+
+		}
 }
