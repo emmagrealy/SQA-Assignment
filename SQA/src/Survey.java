@@ -2,37 +2,36 @@ import java.util.ArrayList;
 
 public class Survey {
 	
-	//Survey
+	//Name 
 	private String name;
-	//Collection of questions
+	//Collection 
 	private ArrayList<Questions> questions = new ArrayList<Questions>();
 
-	//Constructor - name and list of questions
+	//Empty Constructor
+	public Survey() 
+	{
+		
+	}
+	
+	//Constructor - takes in a name and list of questions
 	public Survey(String name, ArrayList<Questions> questions) {
 		this.name = name;
 		this.questions = questions;
 	}
 	
-	//Empty Constructor 
-	public Survey() 
-	{
-
-	}
-	
-	//Constructor - taking in a name
-	public Survey(String name) 
-	{
+	//Constructor - takes in a name
+	public Survey(String name) {
 		this.name = name;
-	}
 
+	}
 	
 	//Add questions
 	public void add(Questions quest)
 	{
-			this.questions.add(quest);
+		this.questions.add(quest);
 	}
 	
-	//Getters and setters
+	//Getters and setter 
 	public String getName() {
 		return name;
 	}
