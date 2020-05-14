@@ -1,7 +1,7 @@
 public class SurveyResponse {
 
 	//int value for survey response answer
-	private int answer =0;
+	//private int answer =0;
 
 	//Empty constructor
 	public SurveyResponse() 
@@ -12,13 +12,13 @@ public class SurveyResponse {
 
 
 	//Getters and setters 
-	public int getAnswer() {
-		return answer;
-	}
+	//public int getAnswer() {
+		//return answer;
+	//}
 
-	public void setAnswer(int answer) {
-		this.answer = answer;
-	}
+	//public void setAnswer(int answer) {
+		//this.answer = answer;
+	//}
 
 
 }
