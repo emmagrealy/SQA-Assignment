@@ -20,14 +20,30 @@ public class Tester {
 	@Test //Test Attribute
 	public void createSurvey()
 	{		
-		//Creation of question object
+		//Question object
 		Questions one = new Questions("Our Customer Service");
-		//Collection to represent questions
+		//Collection 
 		ArrayList<Questions> questions = new ArrayList<Questions>();
-		//adding question to list
+		//Add question to list
 		questions.add(one);
 
 		Survey survey = new Survey("My Questions" ,questions);
 		assertTrue("Should be an object of type 'survey'",survey instanceof Survey);
+	}
+	
+	
+	//Test - see if collection of questions exists within survey object
+	@Test //Test Attribute
+	public void surveyQuestions()
+	{		
+		//Question object
+		Questions one = new Questions("Customer Service");
+		//Collection 
+		ArrayList<Questions> questions = new ArrayList<Questions>();
+		//Add question to list
+		questions.add(one);
+
+		Survey survey = new Survey("My Questions" ,questions);
+		assertTrue("Should be an object of type 'ArrayList'",survey.getQuestions() instanceof ArrayList);
 	}
 }
