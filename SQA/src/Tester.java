@@ -45,4 +45,19 @@ public class Tester {
 
 		assertEquals("Length of questions array should be 2",2 ,s.getQuestions().size());
 	}
+	
+	
+	//Test - see if collection of questions exists within survey object
+	@Test
+	public void surveyQuestions()
+	{		
+		//Creation of question object
+		Questions one = new Questions("Customer Service");
+		//Collection to represent questions
+		ArrayList<Questions> questions = new ArrayList<Questions>();
+		//adding question to list
+		questions.add(one);
+		Survey s = new Survey("My Questions" ,questions);
+		assertTrue("Should be an object of type arralylist",s.getQuestions() instanceof ArrayList);
+	}
 } 
