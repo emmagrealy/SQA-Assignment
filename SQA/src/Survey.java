@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.ArrayList;
 
 public class Survey {
 
@@ -14,6 +13,11 @@ public class Survey {
 		this.questions = questions;
 	}
 
+	//Empty Constructor 
+		public Survey() 
+		{
+
+		}
 
 	//Getters and setters
 	public String getName() {
