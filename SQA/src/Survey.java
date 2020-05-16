@@ -64,9 +64,4 @@ public class Survey {
 		return this.responses;
 	}
 
-	//Add a survey responses object to a survey
-	public void addResponse(SurveyResponse survey)
-	{
-		this.responses.add(survey);
-	}
 }

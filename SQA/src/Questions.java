@@ -2,7 +2,7 @@ public class Questions {
 
 	//Question
 	private String question;
-	//private SurveyResponse response;
+	private SurveyResponse response;
 	
 	//int value for survey response answer
 	private int answer;
@@ -22,13 +22,13 @@ public class Questions {
 		this.question = question;
 	}
 	
-	//public SurveyResponse getResponse() {
-		//return response;
-	//}
+	public SurveyResponse getResponse() {
+		return response;
+	}
 
-	//public void setResponse(SurveyResponse response) {
-		//this.response = response;
-	//}
+	public void setResponse(SurveyResponse response) {
+		this.response = response;
+	}
 	
 	public int getAnswer() 
 	{
