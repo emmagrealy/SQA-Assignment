@@ -68,6 +68,6 @@ public class Tester {
 	{		
 		//New survey response object
 		SurveyResponse surveyRes = new SurveyResponse();
-		assertTrue("Should be an object of type survey Response",surveyRes instanceof Survey);
+		assertTrue("Should be an object of type survey Response",surveyRes instanceof SurveyResponse);
 	}
 } 
