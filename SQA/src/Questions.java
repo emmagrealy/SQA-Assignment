@@ -9,7 +9,7 @@ public class Questions {
 	//Constructor
 	public Questions(String question) {
 		this.question = question;
-		//this.response = new SurveyResponse();
+	this.response = new SurveyResponse();
 	}
 
 	//Getters and setters 
@@ -22,12 +22,12 @@ public class Questions {
 	}
 
 	
-	//public SurveyResponse getResponse() {
-		//return response;
-	//}
+	public SurveyResponse getResponse() {
+		return response;
+	}
 
-	//public void setResponse(SurveyResponse response) {
-		//this.response = response;
-	//}
+	public void setResponse(SurveyResponse response) {
+		this.response = response;
+	}
 
 } 
