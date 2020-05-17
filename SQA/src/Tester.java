@@ -62,4 +62,12 @@ public class Tester {
 	}
 	
 
+	//Test - check that survey response class is created
+	@Test //Test Attribute
+	public void createSurveyResponse()
+	{		
+		//New survey response object
+		surveyResponse surveyRes = new surveyResponse();
+		assertTrue("Should be an object of type survey Response",surveyRes instanceof Survey);
+	}
 } 
