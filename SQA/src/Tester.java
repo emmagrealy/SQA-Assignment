@@ -82,4 +82,22 @@ public class Tester {
 		surveyRes.setAnswer(1);
 		assertNotNull("Method should return a value proving that the answer attribute is NOT null" , surveyRes.getAnswer());
 	}			
+	
+	
+	//Test - can responses can be detected from questions
+	@Test
+	public void questionResponse()
+	{
+		//Create survey
+		Survey survey = new Survey();
+
+		//Question objectS
+		Questions one = new Questions("Customer Service");
+
+		//Add answers to question responses
+		one.getResponse().setAnswer(2);
+
+		//Test - get first questions response answer
+		assertEquals("Value should be '2'",2,one.getResponse().getAnswer());
+	}
 } 
