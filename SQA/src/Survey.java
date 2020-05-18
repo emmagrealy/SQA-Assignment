@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Survey {
 
@@ -103,6 +104,18 @@ public class Survey {
 
 	}
 	
-	
+	public int getMaxValue()
+	{
+		int maxValue = 0;
+		ArrayList<Integer> valueList = new ArrayList<Integer>(); //ArrayList of values
+
+		for(Questions quest : this.questions) //The colon is a shortcut for iterating over a collection. 
+		{
+			valueList.add(quest.getAnswer()); 
+		}
+		maxValue = Collections.max(valueList); 
+		//Max - Returns the maximum element of the given collection, according to the natural ordering of its elements. 
+		return maxValue; // return Max Value
+	}
 
 } 
