@@ -60,5 +60,49 @@ public class Survey {
 	{
 		this.responses.add(survey);
 	}
+	
+	
+	public double getAverageDeviation()
+	{
+		//The sum of all question values - the starting value must be 0
+		int totalQuest = 0;
+
+		//Loop through the values to get "sum"
+		for(Questions quest:this.questions)
+		{
+			totalQuest+= quest.getAnswer(); //Add the value from the loop to the total 
+		}
+
+		//Calculate the mean
+		double mean = (float)totalQuest/this.questions.size();
+
+		//Gathering of absolute deviations
+		ArrayList<Double> absoultedeviation = new ArrayList<Double>(); 
+		for(Questions quest:this.questions)
+		{
+			//Math class contains basic methods for performing basic numeric operations 
+			double absdev = Math.abs(quest.getAnswer() - mean); //abs - Returns the absolute value of a double value
+			absoultedeviation.add(absdev); 						//named absdev variable to not mix up with abs
+		}
+
+		//absolute deviation sum
+		double totalAbsDev = 0; //starting value must be 0
+		for(double dub:absoultedeviation) //The colon is a shortcut for iterating over a collection. 
+		//The variable on the left of the colon is a temporary variable containing a single element from the collection
+		//on the right. With each iteration through the loop, Java pulls the next element from the collection 
+		//and assigns it to the temp variable.
+		{
+			totalAbsDev+=dub; //adding deviation to the starting 0 value
+		}
+
+		//average deviation
+		double averageDev = Math.round((float)totalAbsDev/this.questions.size() * 100.0)/100.0;
+		//round - Returns the closest long to the argument, with ties rounding to positive infinity. 
+
+		return Double.valueOf(averageDev); // Returning averageDev
+
+	}
+	
+	
 
 } 
