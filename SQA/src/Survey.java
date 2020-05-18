@@ -117,5 +117,20 @@ public class Survey {
 		//Max - Returns the maximum element of the given collection, according to the natural ordering of its elements. 
 		return maxValue; // return Max Value
 	}
+	
+	
+	public int getMinValue()
+	{
+		int minValue = 0;
+		ArrayList<Integer> valueList = new ArrayList<Integer>(); //ArrayList of values
+
+		for(Questions quest : this.questions) //The colon is a shortcut for iterating over a collection. 
+		{
+			valueList.add(quest.getAnswer()); 
+		}
+		minValue = Collections.min(valueList); 
+		//Min - Returns the minimum element of the given collection, according to the natural ordering of its elements. 
+		return minValue; // return Min Value
+	}
 
 } 
