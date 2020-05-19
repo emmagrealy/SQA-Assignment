@@ -132,5 +132,44 @@ public class Survey {
 		//Min - Returns the minimum element of the given collection, according to the natural ordering of its elements. 
 		return minValue; // return Min Value
 	}
+	
+	
+	public double getStandardDeviation()
+	{
+		//The sum of all question values - the starting value must be 0
+		int total = 0;
+
+		//Loop through the values to get "sum"
+		for(Questions quest:this.questions)
+		{
+			total+= quest.getAnswer(); //Add the value from the loop to the total 
+		}
+
+		//Calculate the mean
+		double mean = (float)total/this.questions.size();
+
+		//Calculate and gather the squared value of each value 
+		ArrayList<Double> squares = new ArrayList<Double>();
+		for(Questions quest:this.questions)
+		{
+			double squaredVal = (quest.getAnswer()-mean) *(quest.getAnswer()-mean); ///Calculation for a squared value
+			squares.add(squaredVal); //Adding squared value to list
+		}
+
+		//Total of squared values
+		double totalsquaredVals = 0; //starting value always 0
+		for(double dbl:squares)
+		{
+			totalsquaredVals+=dbl; 
+		}
+		totalsquaredVals = totalsquaredVals/this.questions.size(); 
+
+		//Standard deviation by getting square root of the sum of  squares
+		double standardDev = Math.sqrt(totalsquaredVals); 
+		//sqrt - Returns the correctly rounded positive square root of a double value
+
+		//rounded and returned 
+		return Math.round(standardDev* 1000.0)/1000.0;
+	}
 
 } 
