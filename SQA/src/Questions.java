@@ -14,6 +14,14 @@ public class Questions {
 	}		
 
 	//Getters and setters
+
+
+	//Constructor
+	public Questions(String question) {
+		this.question = question;
+	}
+
+  //Getters and setters 
 	public String getQuestions() {
 		return question;
 	}
@@ -34,5 +42,6 @@ public class Questions {
 	{
 		return answer;
 	}
+
 
 }

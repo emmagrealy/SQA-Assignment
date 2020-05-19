@@ -7,6 +7,16 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static org.junit.Assert.assertEquals;
+
+
+import static org.junit.Assert.assertEquals;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+
+
 import org.junit.Test;
 
 public class Tester {
@@ -15,6 +25,7 @@ public class Tester {
 	@Test
 	public void createSurveyEmpty()
 	{		
+
 		Survey s = new Survey();
 		assertTrue("Should be an object of type 'survey'",s instanceof Survey);
 	}
@@ -37,11 +48,57 @@ public class Tester {
 	
 	//Test - see if collection of questions exists within survey object
 	@Test //Test Attribute
+
+		Survey survey = new Survey();
+		assertTrue("Should be an object of type survey",survey instanceof Survey);
+	}
+
+	//Test - create a survey with a name and questions
+	@Test
+	public void createSurvey()
+	{		
+		//Creation of question object
+		Questions one = new Questions("Customer Service");
+		//Collection representing questions
+		ArrayList<Questions> questions = new ArrayList<Questions>();
+		//Add question to list
+
+	@Test //declaring a test
+	public void createSurveyEmpty()
+	{		
+		Survey survey = new Survey();
+		assertTrue("Should be an object of type 'survey'",survey instanceof Survey);
+	}
+
+	//Test - create a survey with a name and questions
+	@Test //declaring a test
+	public void createSurvey()
+	{		
+		//Creation of question object
+		Questions one = new Questions("Our Customer Service");
+		//Collection to represent questions
+		ArrayList<Questions> questions = new ArrayList<Questions>();
+		//adding question to list
+
+		questions.add(one);
+
+		Survey survey = new Survey("My Questions" ,questions);
+		assertTrue("Should be an object of type survey",survey instanceof Survey);
+	}
+	
+	
+	//Test - does a collection of questions exists within the survey objects
+	@Test
+
 	public void surveyQuestions()
 	{		
 		//Question object
 		Questions one = new Questions("Our Customer Service");
+
 		//Collection 
+
+		//Collection representing questions
+
 		ArrayList<Questions> questions = new ArrayList<Questions>();
 		//Add question to list
 		questions.add(one);
@@ -50,14 +107,19 @@ public class Tester {
 		assertTrue("Should be an object of type 'ArrayList'",survey.getQuestions() instanceof ArrayList);
 	}
 	
+
 	
 	//Test - check questions are being added to survey
 	@Test //Test Attribute
+	//Test - check that questions are being added to the survey
+	@Test
+
 	public void addQuestion()
 	{
 		//Question object
 		Questions one = new Questions("Our Customer Service");
 		Questions two = new Questions("Our Product Quality");
+
 
 		Survey survey = new Survey("My Questions");
 		survey.add(one);
@@ -133,4 +195,36 @@ public class Tester {
 			//assertArrayEquals("ArrayList should equal [2,3]", expected,survey.getResponses());
 
 		}
+
+	
+	//Test - see if collection of questions exists within survey object
+	@Test
+	public void surveyQuestions()
+	{		
+		//Creation of question object
+		Questions one = new Questions("Our Customer Service");
+		//Collection to represent questions
+		ArrayList<Questions> questions = new ArrayList<Questions>();
+		//adding question to list
+		questions.add(one);
+		Survey survey = new Survey("My Questions" ,questions);
+		assertTrue("Should be an object of type arralylist",survey.getQuestions() instanceof ArrayList);
+	}
+	
+	
+	//Test - check if questions are being added to the survey
+	@Test
+	public void addQuestion()
+	{
+		//Creation of question object
+		Questions one = new Questions("Our Customer Service");
+		Questions two = new Questions("Our Product Quality");
+		
+
+		Survey survey = new Survey("My Questions");
+		survey.add(one);
+		survey.add(two);
+
+		assertEquals("Length of questions array should be 2",2 ,survey.getQuestions().size());
+	}
 }
