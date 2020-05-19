@@ -26,17 +26,7 @@ public class SurveyResponse {
 	{
 		this.answer = answer;
 	}
-	
 
-	//Getters and setter for class
-	public int getAnswer() {
-		return ans;
-	}
-
-	public void setAnswer(int answer) {
-		this.ans = answer;
-	}
-	
 	
 	
 	//Method - create a list of responses for each question in survey
