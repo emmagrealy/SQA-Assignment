@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 public class SurveyResponse {
 	
-	private int ans = 0;
+	private int answer;
+
 	
 	//ArrayList of questions
 	ArrayList<Questions> questions = new ArrayList<Questions>();
@@ -19,6 +20,14 @@ public class SurveyResponse {
 		this.questions = questions;
 	}
 	
+
+	
+	public void SurveyRes(String SurveyRes) 
+	{
+		this.answer = answer;
+	}
+	
+
 	//Getters and setter for class
 	public int getAnswer() {
 		return ans;
@@ -45,6 +54,17 @@ public class SurveyResponse {
 
 		//return the response values
 		return responses;
+	}
+
+
+	
+	public int getAnswer() 
+	{
+		return answer;
+	}
+	public int setAnswer(int i) 
+	{
+		return answer;
 	}
 
 }
