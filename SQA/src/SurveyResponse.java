@@ -3,9 +3,16 @@ import java.util.ArrayList;
 public class SurveyResponse {
 	
 	private int answer;
+
 	
 	//ArrayList of questions
 	ArrayList<Questions> questions = new ArrayList<Questions>();
+	
+	//Empty constructor
+	public SurveyResponse() {
+
+
+	}
 	
 	//Survey response created -> list of questions from survey passed into the response
 	public SurveyResponse(ArrayList<Questions> questions)
@@ -13,11 +20,24 @@ public class SurveyResponse {
 		this.questions = questions;
 	}
 	
+
 	
 	public void SurveyRes(String SurveyRes) 
 	{
 		this.answer = answer;
 	}
+	
+
+	//Getters and setter for class
+	public int getAnswer() {
+		return ans;
+	}
+
+	public void setAnswer(int answer) {
+		this.ans = answer;
+	}
+	
+	
 	
 	//Method - create a list of responses for each question in survey
 	public ArrayList<Integer> getResponses()
@@ -35,6 +55,7 @@ public class SurveyResponse {
 		//return the response values
 		return responses;
 	}
+
 
 	
 	public int getAnswer() 
