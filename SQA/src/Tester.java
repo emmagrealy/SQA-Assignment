@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -40,7 +41,7 @@ public class Tester {
 		Questions one = new Questions("Our Customer Service");
 		Questions two = new Questions("Our Product Quality");
 
-		Survey survey = new Survey("My Questions");
+		Survey survey = new Survey("My Questions", null);
 		survey.add(one);
 		survey.add(two);
 
@@ -68,7 +69,7 @@ public class Tester {
 	public void createSurveyResponse()
 	{		
 		//New survey response object
-		SurveyResponse surveyRes = new SurveyResponse();
+		SurveyResponse surveyRes = new SurveyResponse(null);
 		assertTrue("Should be an object of type 'Survey Response'",surveyRes instanceof SurveyResponse);
 	}
 	
@@ -78,7 +79,7 @@ public class Tester {
 	public void responseAnswer()
 	{
 		//Survey response object
-		SurveyResponse surveyRes = new SurveyResponse();
+		SurveyResponse surveyRes = new SurveyResponse(null);
 		//set an answer to the survey response
 		surveyRes.setAnswer(1);
 		assertNotNull("Method should return a value proving that the answer attribute is NOT null" , surveyRes.getAnswer());

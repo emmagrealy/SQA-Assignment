@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class SurveyResponse {
 	
+	private int answer;
+	
 	//ArrayList of questions
 	ArrayList<Questions> questions = new ArrayList<Questions>();
 	
@@ -9,6 +11,12 @@ public class SurveyResponse {
 	public SurveyResponse(ArrayList<Questions> questions)
 	{
 		this.questions = questions;
+	}
+	
+	
+	public void SurveyRes(String SurveyRes) 
+	{
+		this.answer = answer;
 	}
 	
 	//Method - create a list of responses for each question in survey
@@ -26,6 +34,16 @@ public class SurveyResponse {
 
 		//return the response values
 		return responses;
+	}
+
+	
+	public int getAnswer() 
+	{
+		return answer;
+	}
+	public int setAnswer(int i) 
+	{
+		return answer;
 	}
 
 }
