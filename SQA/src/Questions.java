@@ -6,14 +6,6 @@ public class Questions {
 	
 	//int value for survey response answer
 	private int answer;
-
-
-	//Constructor
-	public Questions(String questions) {
-		this.question = question;
-		//this.response = new SurveyResponse();
-	}		
-
 	//Getters and setters
 
 
@@ -23,10 +15,6 @@ public class Questions {
 		this.question = question;
 
 		//this.response = new SurveyResponse();
-	}
-
-	//Getters and setters 
-
 	}
 
   //Getters and setters 
@@ -39,21 +27,6 @@ public class Questions {
 		this.question = question;
 	}
 	
-	public SurveyResponse getResponse() {
-		return response;
-	}
-
-	public void setResponse(SurveyResponse response) {
-		this.response = response;
-	}
-	
-	public int getAnswer() 
-	{
-		return answer;
-	}
-
-
-
 	
 	public SurveyResponse getResponse() {
 		return response;
